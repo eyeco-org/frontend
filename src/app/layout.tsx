@@ -49,7 +49,7 @@ export default function RootLayout({
 }) {
   return (
     <html>
-      <body className='w-full h-screen flex flex-col items-center'>
+      <body className='w-full h-screen flex flex-col items-center bg-neutral-1100'>
         <div className='max-w-7xl w-full h-full flex flex-col'>
           <Header />
           {children}

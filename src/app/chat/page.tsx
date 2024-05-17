@@ -35,7 +35,7 @@ export default function ChatPage() {
           <Chat direction='left'>안녕</Chat>
         </div>
         <div className='w-full md:pt-0 dark:border-white/20 md:border-transparent md:dark:border-transparent juice:w-full mb-4'>
-          <div className='px-3 text-base md:px-4 m-auto md:px-5 lg:px-1 xl:px-5'>
+          <div className='px-3 text-base m-auto md:px-5 lg:px-1 xl:px-5'>
             <div className='mx-auto flex flex-1 gap-3 text-base juice:gap-4 juice:md:gap-6'>
               <form className='w-full'>
                 <div className='relative flex h-full max-w-full flex-1 flex-col'>
