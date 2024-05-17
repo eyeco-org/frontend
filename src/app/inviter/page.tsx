@@ -50,11 +50,13 @@ export default function InviterForm() {
 
   return (
     <div className='flex flex-col justify-center mx-auto w-[440px]'>
-      {/* <div>초대하는 사람</div> */}
+      <div className='text-2xl mb-12 text-center'>초대하는 사람</div>
       <div className='p-[25px] border rounded-md'>
-        <div>이 친구는 누구일까요? 친구를 맞춰보는게임 시작!</div>
+        <div className='text-sm mb-4'>
+          이 친구는 누구일까요? 친구를 맞춰보는게임 시작!
+        </div>
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-8'>
+          <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-2'>
             <FormField
               control={form.control}
               name='username'
