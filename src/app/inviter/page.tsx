@@ -49,10 +49,10 @@ export default function InviterForm() {
   }
 
   return (
-    <div className='flex flex-col justify-center mx-auto w-[440px]'>
-      <div className='text-2xl mb-12 text-center'>초대하는 사람</div>
-      <div className='p-[25px] border rounded-md'>
-        <div className='text-sm mb-4'>
+    <div className='flex flex-col justify-center mx-auto w-[440px] text-neutral-100'>
+      <div className='text-2xl mb-12 text-center font-bold'>초대하는 사람</div>
+      <div className='p-[25px] border rounded-md border-neutral-900 bg-neutral-1000'>
+        <div className='text-sm mb-4 text-sky-500'>
           이 친구는 누구일까요? 친구를 맞춰보는게임 시작!
         </div>
         <Form {...form}>
@@ -64,7 +64,11 @@ export default function InviterForm() {
                 <FormItem>
                   <FormLabel>이름</FormLabel>
                   <FormControl>
-                    <Input placeholder='이름을 입력해주세요' {...field} />
+                    <Input
+                      placeholder='이름을 입력해주세요'
+                      {...field}
+                      className='bg-neutral-900 border-neutral-800'
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -77,7 +81,11 @@ export default function InviterForm() {
                 <FormItem>
                   <FormLabel>별명</FormLabel>
                   <FormControl>
-                    <Input placeholder='별명을 입력해주세요' {...field} />
+                    <Input
+                      placeholder='별명을 입력해주세요'
+                      {...field}
+                      className='bg-neutral-900 border-neutral-800'
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -94,13 +102,17 @@ export default function InviterForm() {
                     // defaultValue={field.value}
                   >
                     <FormControl>
-                      <SelectTrigger>
+                      <SelectTrigger className='bg-neutral-900 border-neutral-800'>
                         <SelectValue placeholder='참여 인원을 선택해주세요' />
                       </SelectTrigger>
                     </FormControl>
-                    <SelectContent>
+                    <SelectContent className='bg-neutral-900 border-neutral-800'>
                       {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((n) => (
-                        <SelectItem key={n} value={`${n}`}>
+                        <SelectItem
+                          key={n}
+                          value={`${n}`}
+                          className='focus:bg-neutral-800 focus:text-neutral-100 text-neutral-100'
+                        >
                           {n}명
                         </SelectItem>
                       ))}
@@ -110,7 +122,9 @@ export default function InviterForm() {
                 </FormItem>
               )}
             />
-            <Button type='submit'>초대 QR코드 생성하기</Button>
+            <Button type='submit' className='!mt-4'>
+              초대 QR코드 생성하기
+            </Button>
           </form>
         </Form>
       </div>

@@ -14,6 +14,7 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
 
 const formSchema = z.object({
   username: z.string().min(2, {
@@ -48,10 +49,10 @@ export default function GuestForm() {
   }
 
   return (
-    <div className='flex flex-col justify-center mx-auto w-[440px]'>
-      <div>초대받은 사람</div>
-      <div className='p-[25px] border rounded-md'>
-        <div className=''>나를 소개해주세요</div>
+    <div className='flex flex-col justify-center mx-auto w-[744px] text-neutral-100'>
+      <div className='text-2xl mb-12 text-center font-bold'>초대받은 사람</div>
+      <div className='p-[25px] rounded-md border border-neutral-900 bg-neutral-1000'>
+        <div className='text-[#64748B] mb-4'>나를 소개해주세요</div>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-2'>
             <FormField
@@ -61,7 +62,11 @@ export default function GuestForm() {
                 <FormItem>
                   <FormLabel>이름</FormLabel>
                   <FormControl>
-                    <Input placeholder='이름을 입력해주세요' {...field} />
+                    <Input
+                      placeholder='이름을 입력해주세요'
+                      {...field}
+                      className='bg-neutral-900 border-neutral-800'
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -74,7 +79,11 @@ export default function GuestForm() {
                 <FormItem>
                   <FormLabel>별명</FormLabel>
                   <FormControl>
-                    <Input placeholder='별명을 입력해주세요' {...field} />
+                    <Input
+                      placeholder='별명을 입력해주세요'
+                      {...field}
+                      className='bg-neutral-900 border-neutral-800'
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -85,9 +94,13 @@ export default function GuestForm() {
               name='skill'
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>기술스택</FormLabel>
+                  <FormLabel>스택</FormLabel>
                   <FormControl>
-                    <Input placeholder='기술 스택' {...field} />
+                    <Input
+                      placeholder='기술 스택'
+                      {...field}
+                      className='bg-neutral-900 border-neutral-800'
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -98,9 +111,13 @@ export default function GuestForm() {
               name='mbti'
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>mbti</FormLabel>
+                  <FormLabel>MBTI</FormLabel>
                   <FormControl>
-                    <Input placeholder='mbti' {...field} />
+                    <Input
+                      placeholder='mbti'
+                      {...field}
+                      className='bg-neutral-900 border-neutral-800'
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -111,9 +128,13 @@ export default function GuestForm() {
               name='primaryPlace'
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>주요활동지</FormLabel>
+                  <FormLabel>주요 활동지</FormLabel>
                   <FormControl>
-                    <Input placeholder='primaryPlace' {...field} />
+                    <Input
+                      placeholder='primaryPlace'
+                      {...field}
+                      className='bg-neutral-900 border-neutral-800'
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -124,9 +145,13 @@ export default function GuestForm() {
               name='info'
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>자기소개</FormLabel>
+                  <FormLabel>💁 나를 소개해주세요</FormLabel>
                   <FormControl>
-                    <Input placeholder='info' {...field} />
+                    <Textarea
+                      placeholder='info'
+                      {...field}
+                      className='bg-neutral-900 border-neutral-800'
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -137,15 +162,21 @@ export default function GuestForm() {
               name='interest'
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>취미/관심사</FormLabel>
+                  <FormLabel>📚 취미와 관심사는요</FormLabel>
                   <FormControl>
-                    <Input placeholder='interest' {...field} />
+                    <Textarea
+                      placeholder='interest'
+                      {...field}
+                      className='bg-neutral-900 border-neutral-800'
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
             />
-            <Button type='submit'>제출하고 퀴즈풀기</Button>
+            <Button type='submit' className='!mt-4'>
+              제출하고 퀴즈풀기
+            </Button>
           </form>
         </Form>
       </div>
