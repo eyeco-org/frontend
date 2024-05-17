@@ -5,7 +5,6 @@ import '@/lib/env';
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 
-import FocusText from '@/components/FocusText';
 import { Button } from '@/components/ui/button';
 import { useRouter } from 'next/navigation';
 
@@ -49,160 +48,10 @@ export default function HomePage() {
 
   return (
     <div
-      className='w-full h-full flex items-center justify-center bg-black text-neutral-100 text-[52px] bg-fixed'
+      className='w-full h-full flex items-center justify-center bg-black text-neutral-100 text-[52px] bg-cover'
       style={{ backgroundImage: 'url(/images/Background.png)' }}
     >
-      <div className='mt-1'>
-        <FocusText text='엠티' />
-        <FocusText text='워크숍' />
-        <FocusText text='팀플' />
-        <FocusText text='자기소개' />
-        <FocusText text='새학기' />
-        <FocusText text='첫수업' />
-        <FocusText text='미팅' />
-        <FocusText text='엠티' />
-        <FocusText text='워크숍' />
-        <FocusText text='팀플' />
-        <FocusText text='자기소개' />
-        <FocusText text='엠티' />
-        <FocusText text='워크숍' />
-        <FocusText text='팀플' />
-        <FocusText text='자기소개' />
-        <FocusText text='새학기' />
-        <FocusText text='첫수업' />
-        <FocusText text='미팅' />
-        <FocusText text='엠티' />
-        <FocusText text='워크숍' />
-        <FocusText text='팀플' />
-        <FocusText text='자기소개' />
-        <FocusText text='엠티' />
-        <FocusText text='워크숍' />
-        <FocusText text='팀플' />
-        <FocusText text='자기소개' />
-        <FocusText text='새학기' />
-        <FocusText text='첫수업' />
-        <FocusText text='미팅' />
-        <FocusText text='엠티' />
-        <FocusText text='워크숍' />
-        <FocusText text='팀플' />
-        <FocusText text='자기소개' />
-        <FocusText text='엠티' />
-        <FocusText text='워크숍' />
-        <FocusText text='팀플' />
-        <FocusText text='자기소개' />
-        <FocusText text='새학기' />
-        <FocusText text='첫수업' />
-        <FocusText text='미팅' />
-        <FocusText text='엠티' />
-        <FocusText text='워크숍' />
-        <FocusText text='팀플' />
-        <FocusText text='자기소개' />
-        <FocusText text='엠티' />
-        <FocusText text='워크숍' />
-        <FocusText text='팀플' />
-        <FocusText text='자기소개' />
-        <FocusText text='새학기' />
-        <FocusText text='첫수업' />
-        <FocusText text='미팅' />
-        <FocusText text='엠티' />
-        <FocusText text='워크숍' />
-        <FocusText text='팀플' />
-        <FocusText text='자기소개' />
-        <FocusText text='엠티' />
-        <FocusText text='워크숍' />
-        <FocusText text='팀플' />
-        <FocusText text='자기소개' />
-        <FocusText text='새학기' />
-        <FocusText text='첫수업' />
-        <FocusText text='미팅' />
-        <FocusText text='엠티' />
-        <FocusText text='워크숍' />
-        <FocusText text='팀플' />
-        <FocusText text='자기소개' />
-        <FocusText text='엠티' />
-        <FocusText text='워크숍' />
-        <FocusText text='팀플' />
-        <FocusText text='자기소개' />
-        <FocusText text='새학기' />
-        <FocusText text='첫수업' />
-        <FocusText text='미팅' />
-        <FocusText text='엠티' />
-        <FocusText text='워크숍' />
-        <FocusText text='팀플' />
-        <FocusText text='자기소개' />
-        <FocusText text='엠티' />
-        <FocusText text='워크숍' />
-        <FocusText text='팀플' />
-        <FocusText text='자기소개' />
-        <FocusText text='새학기' />
-        <FocusText text='첫수업' />
-        <FocusText text='미팅' />
-        <FocusText text='엠티' />
-        <FocusText text='워크숍' />
-        <FocusText text='팀플' />
-        <FocusText text='자기소개' />
-        <FocusText text='엠티' />
-        <FocusText text='워크숍' />
-        <FocusText text='팀플' />
-        <FocusText text='자기소개' />
-        <FocusText text='새학기' />
-        <FocusText text='첫수업' />
-        <FocusText text='미팅' />
-        <FocusText text='엠티' />
-        <FocusText text='워크숍' />
-        <FocusText text='팀플' />
-        <FocusText text='자기소개' />
-        <FocusText text='엠티' />
-        <FocusText text='워크숍' />
-        <FocusText text='팀플' />
-        <FocusText text='자기소개' />
-        <FocusText text='새학기' />
-        <FocusText text='첫수업' />
-        <FocusText text='미팅' />
-        <FocusText text='엠티' />
-        <FocusText text='워크숍' />
-        <FocusText text='팀플' />
-        <FocusText text='자기소개' />
-        <FocusText text='엠티' />
-        <FocusText text='워크숍' />
-        <FocusText text='팀플' />
-        <FocusText text='자기소개' />
-        <FocusText text='새학기' />
-        <FocusText text='첫수업' />
-        <FocusText text='미팅' />
-        <FocusText text='엠티' />
-        <FocusText text='워크숍' />
-        <FocusText text='팀플' />
-        <FocusText text='자기소개' />
-        <FocusText text='엠티' />
-        <FocusText text='워크숍' />
-        <FocusText text='팀플' />
-        <FocusText text='자기소개' />
-        <FocusText text='새학기' />
-        <FocusText text='첫수업' />
-        <FocusText text='미팅' />
-        <FocusText text='엠티' />
-        <FocusText text='워크숍' />
-        <FocusText text='팀플' />
-        <FocusText text='자기소개' />
-      </div>
-      <div className='w-[300px]'></div>
-      <div
-        className={`fixed left-[575px] transition-opacity duration-200 ${isVisible ? 'opacity-100' : 'opacity-0'} flex items-center gap-2`}
-      >
-        고민말고{' '}
-        <span>
-          <Image
-            className='inline-block'
-            src='/images/main-logo.png'
-            alt='scroll-down'
-            width={212}
-            height={42}
-          />
-        </span>{' '}
-        하자
-      </div>
-      <div className='fixed left-[575px] top-[430px]'>
+      <div className='fixed left-[600px] top-[525px]'>
         <Button
           className='max-w-[521px] w-full px-8 py-8 gap-4'
           onClick={handleButton}
