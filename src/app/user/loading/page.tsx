@@ -40,35 +40,6 @@ const users = [
 ];
 
 export default function Page() {
-  // const router = useRouter();
-
-  // const [userList, setUserList] = useState(users);
-  // const [timer, setTimer] = useState(null);
-
-  // useEffect(() => {
-  //   const loadingUsers = userList.filter(user => user.status === 'loading');
-  //   if (loadingUsers.length > 0) {
-  //     const interval = setInterval(() => {
-  //       const updatedUsers = userList.map(user => {
-  //         if (user.status === 'loading') {
-  //           return { ...user, status: 'done' };
-  //         }
-  //         return user;
-  //       });
-  //       setUserList(updatedUsers);
-  //     }, 2000);
-  //     setTimer(interval);
-  //   }
-  // }, [userList]);
-
-  // useEffect(() => {
-  //   return () => {
-  //     if (timer) {
-  //       clearInterval(timer);
-  //     }
-  //   };
-  // }, [timer]);
-
   const [userList, setUserList] = useState<
     { name: string; status: string; avartarId: string }[]
   >([]);
