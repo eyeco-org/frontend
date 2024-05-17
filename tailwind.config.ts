@@ -37,6 +37,11 @@ const config = {
         1000: '#25282C',
         1100: '#13161C',
       },
+      'custom-start': '#1B1D23',
+      'custom-end': '#71797F',
+      backgroundImage: {
+        'custom-gradient': 'linear-gradient(90deg, #1B1D23, #71797F)', // Define the gradient
+      },
     },
     container: {
       center: true,
