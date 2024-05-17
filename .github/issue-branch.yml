@@ -1,8 +1,0 @@
-# https://github.com/robvanderleek/create-issue-branch#option-2-configure-github-action
-
-branchName: 'feature-${issue.number}-${issue.title,}'
-branches:
-  - label: epic
-    skip: true
-  - label: debt
-    skip: true
