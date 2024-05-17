@@ -17,7 +17,7 @@ export default function AnswerDialog({
 }: AnswerDialogProps) {
   return (
     <Dialog open={isOpen}>
-      <DialogContent className='w-[390px] h-[321px]'>
+      <DialogContent className='bg-[#24292D] p-4 rounded-lg'>
         <DialogHeader className='flex items-end'>
           <button
             className='w-6 h-6 z-10'
