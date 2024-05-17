@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { KeyboardEvent, useState } from 'react';
 
 import Chat from '@/components/Chat';
+import HintCard from '@/components/HintCard';
 
 export default function ChatPage() {
   const [message, setMessage] = useState('');
@@ -26,8 +27,15 @@ export default function ChatPage() {
   return (
     <div className='w-full max-w-full h-full flex flex-col relative'>
       {isNoChat && (
-        <div className='absolute inset-0 flex justify-center items-center'>
-          <p className='text-center text-neutral-100'>나는 누구일까요?</p>
+        <div className='flex flex-col gap-10 justify-center items-center mt-24'>
+          <p className='text-center font-bold text-2xl text-neutral-100'>
+            나는 누구일까요?
+          </p>
+          <div className='flex gap-2'>
+            <HintCard type='plate' message='좋아하는 음식이 뭐야?' />
+            <HintCard type='cat' message='강아지 vs 고양이' />
+            <HintCard type='movie' message='좋아하는 영화가 뭐야?' />
+          </div>
         </div>
       )}
       <div className='relative h-full w-full px-4 flex flex-col flex-1 overflow-auto transition-width'>
