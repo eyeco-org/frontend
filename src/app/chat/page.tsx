@@ -26,7 +26,7 @@ export default function ChatPage() {
     <div className='w-full max-w-full h-full flex flex-col relative'>
       {isNoChat && (
         <div className='absolute inset-0 flex justify-center items-center'>
-          <p>나는 누구일까요?</p>
+          <p className='text-center text-neutral-100'>나는 누구일까요?</p>
         </div>
       )}
       <div className='relative h-full w-full px-4 flex flex-col flex-1 overflow-auto transition-width'>

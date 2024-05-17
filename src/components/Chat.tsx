@@ -18,7 +18,7 @@ export default function Chat({
   const chatStyle = {
     padding: 'px-4 py-2',
     borderRadius: direction === 'left' ? 'rounded-r-lg' : 'rounded-l-lg',
-    bg: direction === 'left' ? 'bg-[#F8F8F8]' : 'bg-[#EFF4FC]',
+    bg: direction === 'left' ? 'bg-[#EFF4FC]' : 'bg-[#F8F8F8]',
   };
   const chatWrapperClassName = Object.values(chatWrapperStyle).join(' ');
   const chatClassName = Object.values(chatStyle).join(' ');
