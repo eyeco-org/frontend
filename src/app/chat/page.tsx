@@ -57,8 +57,12 @@ export default function ChatPage() {
                             dir='auto'
                             rows={1}
                             placeholder='메시지 ChatGPT'
+                            style={{
+                              height: 40,
+                              overflowY: 'hidden',
+                              background: 'transparent',
+                            }}
                             className='m-0 resize-none border-0 bg-transparent px-0 text-token-text-primary focus:ring-0 focus-visible:ring-0 max-h-[25dvh] max-h-52'
-                            style={{ height: 40, overflowY: 'hidden' }}
                             value={message}
                             onChange={(e) => setMessage(e.target.value)}
                             onKeyDown={handleEnterDown}
