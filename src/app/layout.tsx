@@ -49,9 +49,11 @@ export default function RootLayout({
 }) {
   return (
     <html>
-      <body>
-        <Header />
-        {children}
+      <body className='w-full h-screen flex flex-col items-center'>
+        <div className='max-w-7xl w-full h-full flex flex-col'>
+          <Header />
+          {children}
+        </div>
       </body>
     </html>
   );
