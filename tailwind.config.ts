@@ -19,6 +19,9 @@ const config = {
       },
     },
     extend: {
+      width: {
+        'max-content': '1280px',
+      },
       fontFamily: {
         primary: ['Inter', ...defaultTheme.fontFamily.sans],
       },

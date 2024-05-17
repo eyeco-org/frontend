@@ -3,6 +3,8 @@ import * as React from 'react';
 
 import '@/styles/globals.css';
 
+import Header from '@/components/Header';
+
 import { siteConfig } from '@/constant/config';
 
 // !STARTERCONF Change these default meta
@@ -47,7 +49,10 @@ export default function RootLayout({
 }) {
   return (
     <html>
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
