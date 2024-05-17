@@ -11,10 +11,12 @@ import { useAdminInfoStore } from '@/store/adminInfo';
 export default function Page() {
   const { toast } = useToast();
   const handleClickCopy = async () => {
-    await navigator.clipboard.writeText('http://localhost:3000/user?admin=MJ');
+    await navigator.clipboard.writeText(
+      'https://dnd-hack.vercel.app//user?admin=MJ',
+    );
     toast({
       title: '링크 복사 완료!',
-      description: 'http://localhost:3000/user?admin=MJ',
+      description: 'https://dnd-hack.vercel.app//user?admin=MJ',
     });
     return null;
   };
