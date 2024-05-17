@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 const users = [
@@ -54,7 +56,13 @@ export default function page() {
                   <AvatarFallback>{user.name}</AvatarFallback>
                 </Avatar>
               ) : (
-                <div className='w-[111px] h-[111px] bg-gradient-to-b to-custom-end from-custom-start rounded-full' />
+                <Image
+                  alt='유저없음'
+                  src='/images/face/no_user.png'
+                  width={111}
+                  height={111}
+                />
+                // <div className='w-[111px] h-[111px] bg-gradient-to-b to-custom-end from-custom-start rounded-full' />
               )}
             </div>
           ))}
