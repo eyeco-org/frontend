@@ -4,38 +4,38 @@ const dummy = [
   {
     id: 1,
     username: '문주',
-    time: '00:32',
-    count: '4',
+    time: '00:13',
+    count: '2',
   },
   {
     id: 2,
     username: '박소현',
-    time: '00:36',
+    time: '00:22',
     count: '4',
   },
   {
     id: 3,
     username: '정준원',
-    time: '00:48',
+    time: '00:27',
     count: '6',
   },
   {
     id: 4,
     username: '오두호',
-    time: '01:11',
-    count: '12',
+    time: '00:29',
+    count: '9',
   },
   {
     id: 5,
     username: '이보경',
-    time: '01:30',
-    count: '13',
+    time: '00:33',
+    count: '9',
   },
   {
     id: 6,
     username: '공민제',
-    time: '02:45',
-    count: '20',
+    time: '00:35',
+    count: '10',
   },
 ];
 

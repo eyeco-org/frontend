@@ -48,7 +48,7 @@ export default function ChatPage() {
   const navigate = useRouter();
   const handleToggleIsSuccess = (isSuccess: boolean) => {
     setIsSuccess(isSuccess);
-    navigate.push('/rank');
+    navigate.push('/rank/loading');
   };
 
   return (

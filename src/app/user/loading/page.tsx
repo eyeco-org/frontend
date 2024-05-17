@@ -69,10 +69,11 @@ export default function Page() {
       setUserList((prev) => [...prev, users[5]]);
       // navigate.push('/user/chat')
     }, 5010);
-
-    navigate.replace('/user/chat');
   }, []);
 
+  useEffect(() => {
+    if (userList.length >= 6) navigate.replace('/user/chat');
+  }, [userList]);
   return (
     <div className='w-full max-w-full h-full flex flex-col items-center relative'>
       <div className='flex flex-col gap-y-36 mt-24'>
