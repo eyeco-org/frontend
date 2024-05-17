@@ -3,39 +3,39 @@ import Image from 'next/image';
 const dummy = [
   {
     id: 1,
-    username: '이름이름',
-    time: '00:00',
-    count: '12',
+    username: '문주',
+    time: '00:32',
+    count: '4',
   },
   {
     id: 2,
-    username: '이름이름',
-    time: '00:00',
-    count: '12',
+    username: '박소현',
+    time: '00:36',
+    count: '4',
   },
   {
     id: 3,
-    username: '이름이름',
-    time: '00:00',
-    count: '12',
+    username: '정준원',
+    time: '00:48',
+    count: '6',
   },
   {
     id: 4,
-    username: '이름이름',
-    time: '00:00',
+    username: '오두호',
+    time: '01:11',
     count: '12',
   },
   {
     id: 5,
-    username: '이름이름',
-    time: '00:00',
-    count: '12',
+    username: '이보경',
+    time: '01:30',
+    count: '13',
   },
   {
     id: 6,
-    username: '이름이름',
-    time: '00:00',
-    count: '12',
+    username: '공민제',
+    time: '02:45',
+    count: '20',
   },
 ];
 
@@ -57,7 +57,7 @@ export default function LankPage() {
             <div className='w-[110px] flex flex-col gap-[6px] items-center'>
               <div className='rounded-full overflow-hidden'>
                 <Image
-                  src='/images/avatar/Avatar-Images-1.png'
+                  src={`/images/avatar/Avatar-Images-${idx + 1}.png`}
                   alt=''
                   width={40}
                   height={40}
@@ -87,7 +87,7 @@ export default function LankPage() {
         {dummy.slice(3).map((user, idx) => (
           <div key={user.id} className='flex justify-between mx-auto'>
             <div className='flex gap-[18px] ml-[-18px] text-[24px]'>
-              <div>{idx + 1}</div>
+              <div>{idx + 4}</div>
               <div className='w-[252px]'>{user.username}</div>
             </div>
             <div className='flex gap-4 items-center text-[14px]'>

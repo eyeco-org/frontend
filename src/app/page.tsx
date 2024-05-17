@@ -7,8 +7,10 @@ import { useEffect, useRef, useState } from 'react';
 
 import FocusText from '@/components/FocusText';
 import { Button } from '@/components/ui/button';
+import { useRouter } from 'next/navigation';
 
 export default function HomePage() {
+  const router = useRouter();
   const [isVisible, setIsVisible] = useState(true);
   const timeoutRef = useRef<number | null>(null);
 
@@ -40,6 +42,10 @@ export default function HomePage() {
       }
     };
   }, []);
+
+  const handleButton = () => {
+    router.replace('/admin');
+  };
 
   return (
     <div
@@ -197,7 +203,10 @@ export default function HomePage() {
         하자
       </div>
       <div className='fixed left-[575px] top-[430px]'>
-        <Button className='max-w-[521px] w-full px-8 py-8 gap-4'>
+        <Button
+          className='max-w-[521px] w-full px-8 py-8 gap-4'
+          onClick={handleButton}
+        >
           <Image
             alt='링크 복사하기'
             src='/svg/gamepad.svg'

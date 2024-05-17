@@ -52,7 +52,9 @@ export default function RootLayout({
       <body className='w-full h-screen flex flex-col items-center bg-neutral-1100'>
         <div className='max-w-7xl w-full h-full flex flex-col'>
           <Header />
+          {/* <div className='py-24'> */}
           {children}
+          {/* </div> */}
         </div>
       </body>
     </html>
