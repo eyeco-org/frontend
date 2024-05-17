@@ -57,7 +57,10 @@ export default function ChatPage() {
         {messages.length === 0 && (
           <div className='flex flex-col gap-10 justify-center items-center mt-24'>
             <p className='text-center font-bold text-2xl text-neutral-100'>
-              나는 누구일까요?
+              누구인지 맞춰보세요!
+            </p>
+            <p className='text-center font-bold text-md text-neutral-300'>
+              (추천 질문)
             </p>
             <div className='flex gap-2'>
               <HintCard type='plate' message='좋아하는 음식이 뭐야?' />
