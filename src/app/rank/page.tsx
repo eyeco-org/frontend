@@ -47,8 +47,8 @@ const lanks = [
 
 export default function LankPage() {
   return (
-    <div className='text-neutral-100 mx-auto'>
-      <section className='flex gap-2 '>
+    <>
+      <section className='flex gap-4 text-neutral-100 mx-auto'>
         {dummy.slice(0, 3).map((user, idx) => (
           <div
             key={user.id}
@@ -83,12 +83,12 @@ export default function LankPage() {
           </div>
         ))}
       </section>
-      <section className='flex flex-col gap-11 py-14'>
+      <section className='w-full flex flex-col gap-11 py-14 text-neutral-100 bg-neutral-900'>
         {dummy.slice(3).map((user, idx) => (
-          <div key={user.id} className='flex justify-between'>
+          <div key={user.id} className='flex justify-between mx-auto'>
             <div className='flex gap-[18px] ml-[-18px] text-[24px]'>
               <div>{idx + 1}</div>
-              <div className='w-[236px]'>{user.username}</div>
+              <div className='w-[252px]'>{user.username}</div>
             </div>
             <div className='flex gap-4 items-center text-[14px]'>
               <div className='flex gap-1 items-center'>
@@ -105,6 +105,6 @@ export default function LankPage() {
           </div>
         ))}
       </section>
-    </div>
+    </>
   );
 }
