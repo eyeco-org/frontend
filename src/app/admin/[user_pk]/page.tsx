@@ -3,11 +3,19 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { Button } from '@/components/ui/button';
+import { Toaster } from '@/components/ui/toaster';
+import { useToast } from '@/components/ui/use-toast';
 
 import { useAdminInfoStore } from '@/store/adminInfo';
 
 export default function Page() {
-  const handleClickCopy = () => {
+  const { toast } = useToast();
+  const handleClickCopy = async () => {
+    await navigator.clipboard.writeText('http://localhost:3000/user?admin=MJ');
+    toast({
+      title: '링크 복사 완료!',
+      description: 'http://localhost:3000/user?admin=MJ',
+    });
     return null;
   };
   const username = useAdminInfoStore((state) => state.nickname);
@@ -42,6 +50,7 @@ export default function Page() {
           </Button>
         </Link>
       </div>
+      <Toaster />
     </div>
   );
 }

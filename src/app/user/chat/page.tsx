@@ -105,7 +105,7 @@ export default function ChatPage() {
                                 overflowY: 'hidden',
                                 background: 'transparent',
                               }}
-                              className='m-0 resize-none border-0 bg-transparent px-0 text-token-text-primary focus:ring-0 focus-visible:ring-0 max-h-[25dvh] max-h-52'
+                              className='m-0 resize-none border-0 bg-transparent px-0 text-token-text-primary focus:ring-0 focus-visible:ring-0 max-h-[25dvh]'
                               value={message}
                               onChange={(e) => setMessage(e.target.value)}
                               onKeyDown={handleEnterDown}

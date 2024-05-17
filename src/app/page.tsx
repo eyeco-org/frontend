@@ -207,12 +207,7 @@ export default function HomePage() {
           className='max-w-[521px] w-full px-8 py-8 gap-4'
           onClick={handleButton}
         >
-          <Image
-            alt='링크 복사하기'
-            src='/svg/gamepad.svg'
-            width={16}
-            height={16}
-          />
+          <Image alt='시작하기' src='/svg/gamepad.svg' width={16} height={16} />
           <p className='text-xl font-medium'>GenMe로 놀아보기</p>
         </Button>
       </div>
