@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { KeyboardEvent, useState } from 'react';
 
 import Chat from '@/components/Chat';
@@ -41,7 +42,7 @@ export default function ChatPage() {
                 <div className='relative flex h-full max-w-full flex-1 flex-col'>
                   <div className='absolute bottom-full left-0 right-0' />
                   <div className='flex w-full items-center'>
-                    <div className='flex w-full flex-col gap-1.5 rounded-[26px] p-1.5 transition-colors bg-[#f4f4f4] dark:bg-token-main-surface-secondary'>
+                    <div className='flex w-[95%] mr-4 flex-col gap-1.5 rounded-[26px] p-1.5 transition-colors bg-[#f4f4f4] dark:bg-token-main-surface-secondary'>
                       <div className='flex items-end gap-1.5 md:gap-3.5'>
                         <button
                           aria-haspopup='dialog'
@@ -68,28 +69,19 @@ export default function ChatPage() {
                             onKeyDown={handleEnterDown}
                           />
                         </div>
-                        <button
-                          className='mb-1 mr-1 flex h-8 w-8 items-center justify-center rounded-full bg-black text-white transition-colors hover:opacity-70 focus-visible:outline-none focus-visible:outline-black disabled:bg-[#D7D7D7] disabled:text-[#f4f4f4] disabled:hover:opacity-100 dark:bg-white dark:text-black dark:focus-visible:outline-white disabled:dark:bg-token-text-quaternary dark:disabled:text-token-main-surface-secondary'
-                          disabled={message === ''}
-                        >
-                          <svg
-                            xmlns='http://www.w3.org/2000/svg'
-                            width={32}
-                            height={32}
-                            fill='none'
-                            viewBox='0 0 32 32'
-                            className='icon-2xl'
-                          >
-                            <path
-                              fill='currentColor'
-                              fillRule='evenodd'
-                              d='M15.192 8.906a1.143 1.143 0 0 1 1.616 0l5.143 5.143a1.143 1.143 0 0 1-1.616 1.616l-3.192-3.192v9.813a1.143 1.143 0 0 1-2.286 0v-9.813l-3.192 3.192a1.143 1.143 0 1 1-1.616-1.616z'
-                              clipRule='evenodd'
-                            />
-                          </svg>
-                        </button>
                       </div>
                     </div>
+                    <button
+                      className='mb-1 mr-1 flex h-8 w-8 items-center justify-center rounded-full bg-black text-white transition-colors hover:opacity-70 focus-visible:outline-none focus-visible:outline-black  disabled:text-[#f4f4f4] disabled:hover:opacity-100 dark:bg-white dark:text-black dark:focus-visible:outline-white disabled:dark:bg-token-text-quaternary dark:disabled:text-token-main-surface-secondary'
+                      disabled={message === ''}
+                    >
+                      <Image
+                        alt='전송'
+                        src='/svg/send.svg'
+                        width={24}
+                        height={24}
+                      />
+                    </button>
                   </div>
                 </div>
               </form>
