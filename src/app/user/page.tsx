@@ -1,6 +1,7 @@
 'use client';
 
 import { zodResolver } from '@hookform/resolvers/zod';
+import { useRouter } from 'next/navigation';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 
@@ -28,7 +29,12 @@ const formSchema = z.object({
   interest: z.string(),
 });
 
-export default function GuestForm() {
+export default function UserPage() {
+  const router = useRouter();
+  // const searchParams = useSearchParams()
+  // const user_pk = searchParams.get('admin')
+  // console.log(user_pk)
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -42,10 +48,11 @@ export default function GuestForm() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    console.log(values);
+  // function onSubmit(values: z.infer<typeof formSchema>) {
+  function onSubmit() {
+    // console.log(values);
+
+    router.replace('/user/success');
   }
 
   return (

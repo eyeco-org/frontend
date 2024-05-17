@@ -12,7 +12,7 @@ const users = [
   },
   {
     name: 'Bob',
-    status: 'loading',
+    status: 'done',
     avartarId: '2',
   },
   {

@@ -1,6 +1,7 @@
 'use client';
 
 import { zodResolver } from '@hookform/resolvers/zod';
+import { useRouter } from 'next/navigation';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 
@@ -17,10 +18,6 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 
 const formSchema = z.object({
-  username: z.string().min(2, {
-    message: 'Username must be at least 2 characters.',
-  }),
-  nickname: z.string(),
   skill: z.string(),
   mbti: z.string(),
   primaryPlace: z.string(),
@@ -28,12 +25,11 @@ const formSchema = z.object({
   interest: z.string(),
 });
 
-export default function GuestForm() {
+export default function IntroduceForm() {
+  const router = useRouter();
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      username: '',
-      nickname: '',
       skill: '',
       mbti: '',
       primaryPlace: '',
@@ -42,10 +38,11 @@ export default function GuestForm() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    console.log(values);
+  // function onSubmit(values: z.infer<typeof formSchema>) {
+  function onSubmit() {
+    // console.log(values);
+
+    router.replace('/user/success');
   }
 
   return (

@@ -1,6 +1,7 @@
 'use client';
 
 import { zodResolver } from '@hookform/resolvers/zod';
+import { useRouter } from 'next/navigation';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 
@@ -32,7 +33,9 @@ const formSchema = z.object({
   }),
 });
 
-export default function InviterForm() {
+export default function AdminPage() {
+  const router = useRouter();
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -42,10 +45,13 @@ export default function InviterForm() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  // function onSubmit(values: z.infer<typeof formSchema>) {
+  function onSubmit() {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
-    console.log(values);
+    // console.log(values);
+    const user_pk = 'abc';
+    router.replace(`/admin/${user_pk}`);
   }
 
   return (

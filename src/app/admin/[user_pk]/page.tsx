@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 import { Button } from '@/components/ui/button';
 
-export default function page() {
+export default function Page() {
   const handleClickCopy = () => {
     return null;
   };
@@ -27,7 +27,7 @@ export default function page() {
           />
           <p>링크 복사하기</p>
         </Button>
-        <Link href='/inviter'>
+        <Link href='/admin/introduce'>
           <Button className='max-w-[521px] w-full bg-transparent px-8 py-8 gap-4 border border-neutral-100 hover:bg-neutral-800'>
             <Image
               alt='자기소개 작성하기'
