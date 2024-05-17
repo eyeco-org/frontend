@@ -4,11 +4,14 @@ import Link from 'next/link';
 
 import { Button } from '@/components/ui/button';
 
+import { useAdminInfoStore } from '@/store/adminInfo';
+
 export default function Page() {
   const handleClickCopy = () => {
     return null;
   };
-  const username = 'username';
+  const username = useAdminInfoStore((state) => state.nickname);
+
   return (
     <div className='w-full max-w-full h-full flex flex-col items-center relative'>
       <p className='text-neutral-100 text-center text-2xl font-bold'>

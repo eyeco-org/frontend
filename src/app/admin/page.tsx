@@ -23,6 +23,8 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 
+import { useAdminInfoStore } from '@/store/adminInfo';
+
 const formSchema = z.object({
   username: z.string().min(2, {
     message: 'Username must be at least 2 characters.',
@@ -35,6 +37,7 @@ const formSchema = z.object({
 
 export default function AdminPage() {
   const router = useRouter();
+  const setAdminNickname = useAdminInfoStore((state) => state.setNickname);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -45,11 +48,9 @@ export default function AdminPage() {
     },
   });
 
-  // function onSubmit(values: z.infer<typeof formSchema>) {
-  function onSubmit() {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
+  function onSubmit(values: z.infer<typeof formSchema>) {
     // console.log(values);
+    setAdminNickname(values.nickname);
     const user_pk = 'abc';
     router.replace(`/admin/${user_pk}`);
   }
