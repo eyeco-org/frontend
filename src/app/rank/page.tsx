@@ -49,20 +49,39 @@ export default function LankPage() {
   return (
     <>
       <section className='flex gap-4 text-neutral-100 mx-auto'>
+        <Image
+          src='/images/congrat-confetti.gif'
+          width={370}
+          height={540}
+          alt='폭죽'
+          className='absolute'
+        />
         {dummy.slice(0, 3).map((user, idx) => (
           <div
             key={user.id}
             className={`flex flex-col justify-end gap-3 ${lanks[idx].order}`}
           >
             <div className='w-[110px] flex flex-col gap-[6px] items-center'>
-              <div className='rounded-full overflow-hidden'>
-                <Image
-                  src={`/images/avatar/Avatar-Images-${idx + 1}.png`}
-                  alt=''
-                  width={40}
-                  height={40}
-                />
+              <div className='flex flex-col items-center'>
+                {idx === 0 && (
+                  <Image
+                    src='/images/crown.gif'
+                    width={35}
+                    height={35}
+                    alt='왕관'
+                    className='relative top-3'
+                  />
+                )}
+                <div className='rounded-full overflow-hidden'>
+                  <Image
+                    src={`/images/avatar/Avatar-Images-${idx + 1}.png`}
+                    alt=''
+                    width={40}
+                    height={40}
+                  />
+                </div>
               </div>
+
               <span>{user.username}</span>
               <div className='flex gap-1'>
                 <Image

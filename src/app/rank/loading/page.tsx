@@ -8,32 +8,32 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 const users = [
   {
-    name: 'Alice',
+    name: '문주',
     status: 'done',
     avartarId: '1',
   },
   {
-    name: 'Bob',
+    name: '박소현',
     status: 'done',
     avartarId: '2',
   },
   {
-    name: 'Charlie',
+    name: '정준원',
     status: 'done',
     avartarId: '3',
   },
   {
-    name: 'David',
+    name: '오두호',
     status: 'done',
     avartarId: '4',
   },
   {
-    name: 'Eve',
+    name: '이보경',
     status: 'done',
     avartarId: '5',
   },
   {
-    name: 'Frank',
+    name: '공민제',
     status: 'done',
     avartarId: '6',
   },
